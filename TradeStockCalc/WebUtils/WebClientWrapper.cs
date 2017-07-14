@@ -5,7 +5,12 @@ namespace TradeStockCalc.WebUtils
 {
     class WebClientWrapper : IWebClientRequest
     {
-        protected WebClient WebClient { get; set; } = new WebClient();
+        protected WebClient WebClient { get; set; }
+
+        public WebClientWrapper()
+        {
+            WebClient = new WebClient();
+        }
 
         public void Dispose()
         {

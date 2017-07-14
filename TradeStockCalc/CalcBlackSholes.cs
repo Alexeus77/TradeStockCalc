@@ -65,7 +65,7 @@ namespace TradeStockCalc
         /// <returns></returns>
         private static double CND(double X)
         {
-            Chart chart = new Chart();
+            System.Windows.Forms.DataVisualization.Charting.Chart chart = new Chart();
             return chart.DataManipulator.Statistics.NormalDistribution(X);
         }
         

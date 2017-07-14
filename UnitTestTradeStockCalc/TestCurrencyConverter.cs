@@ -8,7 +8,7 @@ using TradeStockCalc.Data;
 namespace UnitTestTradeStockCalc
 {
     [TestClass]
-    public class CurrencyConverter
+    public class TestCurrencyConverter
     {
         [TestMethod]
         public void ConvertWithECB_UseStubWebClientResponse_ReturnsFixedValue()

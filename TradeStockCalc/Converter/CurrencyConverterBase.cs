@@ -10,7 +10,13 @@ namespace TradeStockCalc.Converter
         protected IDictionary<Tuple<Currency, Currency>, decimal> CachedRates 
             = new Dictionary<Tuple<Currency, Currency>, decimal>();
 
-        public IWebClientRequest Webclient { get; set; } = new WebClientWrapper();
+        public IWebClientRequest Webclient { get; set; }
+
+        public CurrencyConverterBase()
+        {
+            Webclient = new WebClientWrapper();
+        }
+
         abstract protected decimal GetRateFromWebService(Currency inputCurrency, Currency outputCurrency);
         public decimal GetRate(Currency inputCurrency, Currency outputCurrency)
         {

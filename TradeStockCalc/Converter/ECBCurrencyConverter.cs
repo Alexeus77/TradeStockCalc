@@ -14,9 +14,15 @@ namespace TradeStockCalc.Converter
         JavaScriptSerializer _jserializer = new JavaScriptSerializer();
         ECBResponse _responseDeserialized = null;
 
-        private static string Url { get; } = "http://api.fixer.io/latest?base={0}";
-        public static string ServiceUrl { get; } = "http://api.fixer.io/latest";
+        private static string Url { get; set; }
+        public static string ServiceUrl { get; private set; }
 
+
+        public ECBCurrencyConverter()
+        {
+            Url = "http://api.fixer.io/latest?base={0}";
+            ServiceUrl = "http://api.fixer.io/latest";
+        }
 
         protected override decimal GetRateFromWebService(Currency inputCurrency, Currency outputCurrency)
         {

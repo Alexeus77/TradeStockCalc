@@ -41,6 +41,9 @@ namespace TradeStockCalc.GUI
             try
             {
 
+                this.Cursor = Cursors.WaitCursor;
+                this.Enabled = false;
+
                 if (_currentStream == null)
                     return;
 
@@ -50,6 +53,12 @@ namespace TradeStockCalc.GUI
             catch(Exception exp)
             {
                 ProcessError(exp);
+            }
+
+            finally
+            {
+                this.Cursor = Cursors.Default;
+                this.Enabled = true;
             }
         }
 
@@ -85,12 +94,15 @@ namespace TradeStockCalc.GUI
         private void button1_Click(object sender, EventArgs e)
         {
 
+            
             int[] ladderRange =
                 { -10, -5, -2, -1, 0, 1, 2, 5, 10 };
 
             ShowMatrixFrm("Volatily Deviation", ladderRange,
                 (inputstream, currency, filter, deviationValue) => 
                 TradesCalculationHelper.CalculateTrades(inputstream, currency, filter, 0, deviationValue));
+
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -110,6 +122,7 @@ namespace TradeStockCalc.GUI
 
             if (_currentStream == null)
                 return;
+            
 
             string[] columnHeadersNames = new string[ladderRange.Count() + 1];
 
@@ -133,6 +146,9 @@ namespace TradeStockCalc.GUI
             try
             {
 
+                this.Cursor = Cursors.WaitCursor;
+                this.Enabled = false;
+
                 foreach (var deviationValue in ladderRange)
                 {
                     Price totalResultCall = Price.Default;
@@ -147,7 +163,7 @@ namespace TradeStockCalc.GUI
                     putItem.SubItems.Add(totalResultPut.Value);
                 }
 
-                frmLadder.Show(this);
+                frmLadder.Show(this);   
             }
             catch(Exception exp)
             {
@@ -155,7 +171,12 @@ namespace TradeStockCalc.GUI
                 frmLadder.Close();
             }
 
-
+            finally
+            {
+                this.Cursor = Cursors.Default;
+                this.Enabled = true;
+            }
+            
         }
         
 
