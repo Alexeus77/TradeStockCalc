@@ -1,0 +1,9 @@
+Id,Name,Type,Style,C/P,Expiry,Strike price,CCY
+123,CDE LTD,StockOption,European,C,01.04.2017,100,USD
+124,ABC INC,StockOption,European,C,01.04.2017,20,PLN
+125,CDE LTD,StockOption,European,P,01.04.2017,120,USD
+126,CDE LTD,StockOption,European,P,01.04.2017,140,USD
+127,CDE LTD,StockOption,European,C,01.07.2016,100,USD
+128,ABC INC,StockOption,European,P,01.07.2016,50,PLN
+129,CDE LTD,StockOption,European,C,01.10.2016,100,USD
+130,ABC INC,StockOption,European,P,01.10.2016,50,PLN

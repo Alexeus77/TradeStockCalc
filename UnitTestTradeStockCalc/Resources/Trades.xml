@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<portfolio>
+<trade id="123" name="CDE LTD" type="StockOption" style="European" cp="C" expiry="2017-04-01" strike="100" ccy="USD" />
+<trade id="124" name="ABC INC" type="StockOption" style="European" cp="C" expiry="2017-04-01" strike="20" ccy="PLN" />
+<trade id="125" name="CDE LTD" type="StockOption" style="European" cp="P" expiry="2017-04-01" strike="120" ccy="USD" />
+<trade id="126" name="CDE LTD" type="StockOption" style="European" cp="P" expiry="2017-04-01" strike="140" ccy="USD" />
+<trade id="127" name="CDE LTD" type="StockOption" style="European" cp="C" expiry="2016-07-01" strike="100" ccy="USD" />
+<trade id="128" name="ABC INC" type="StockOption" style="European" cp="P" expiry="2016-07-01" strike="50" ccy="PLN" />
+<trade id="129" name="CDE LTD" type="StockOption" style="European" cp="C" expiry="2016-10-01" strike="100" ccy="USD" />
+<trade id="130" name="ABC INC" type="StockOption" style="European" cp="P" expiry="2016-10-01" strike="50" ccy="PLN" />
+</portfolio>
